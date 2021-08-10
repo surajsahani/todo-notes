@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    override fun onItemClicked(note: Note) {
+    fun onItemClicked(note: Note) {
         viewModel.deleteNote(note)
         Toast.makeText(this,"${note.text} Deleted", Toast.LENGTH_LONG).show()
     }

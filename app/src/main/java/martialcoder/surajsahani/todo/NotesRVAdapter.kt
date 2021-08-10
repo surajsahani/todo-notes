@@ -9,7 +9,7 @@ import android.widget.TextView
 
 import androidx.recyclerview.widget.RecyclerView
 
-class NotesRVAdapter(private val context: Context, private val listener: INotesAdapter): RecyclerView.Adapter<NotesRVAdapter.NoteViewHolder>() {
+class NotesRVAdapter(private val context: Context, private val listener: MainActivity): RecyclerView.Adapter<NotesRVAdapter.NoteViewHolder>() {
 
     val allNotes = ArrayList<Note>()
 
